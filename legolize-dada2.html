@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Metadata -->
+	<meta name="description" content="">
+	<meta property="og:description" content="">
+	<meta property="og:title" content="LEGOlize DADA2: getting DADA2 into Snakemake" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://cpauvert.github.io/legolize-dada2.html" />
+		<meta property="og:image" content="https://cpauvert.github.io/images/profile.jpg" />
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Charlie Pauvert webpages</title>
+
+		<!-- CSS -->
+
+		<link rel="stylesheet" href="https://cpauvert.github.io/theme/css/poole.css" />
+		<link rel="stylesheet" href="https://cpauvert.github.io/theme/css/hyde.css" />
+		<link rel="stylesheet" href="https://cpauvert.github.io/theme/css/syntax.css" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" crossorigin="anonymous">
+			<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+		<!-- Feeds -->
+<link href="https://cpauvert.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Charlie Pauvert webpages Full Atom Feed" />
+<link href="https://cpauvert.github.io/feeds/snakemake.atom.xml" type="application/atom+xml" rel="alternate" title="Charlie Pauvert webpages Categories Atom Feed" />
+
+		<!-- Analytics -->
+	</head>
+
+	<body class="theme-base-0b layout-reverse">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<!-- <img class="profile-picture" src="https://cpauvert.github.io/images/profile.jpg"> -->
+					Charlie Pauvert webpages
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+			<ul class="sidebar-nav">
+					<li><a href="https://cpauvert.github.io/pages/about.html">About</a></li>
+			</ul>
+		<nav class="sidebar-social">
+					<a class="sidebar-social-item" href="https://www.researchgate.net/profile/Charlie_Pauvert" target="_blank">
+						<i class="ai ai-researchgate"></i>
+					</a>
+					<a class="sidebar-social-item" href="https://www.linkedin.com/in/charliepauvert" target="_blank">
+						<i class="fa fa-linkedin"></i>
+					</a>
+					<a class="sidebar-social-item" href="https://github.com/cpauvert" target="_blank">
+						<i class="fa fa-github"></i>
+					</a>
+			<a class="sidebar-social-item" href="https://cpauvert.github.io/feeds/all.atom.xml">
+				<i class="fa fa-rss"></i>
+			</a>
+		</nav>
+			<p class="sidebar-footer">(c) Copyright Charlie Pauvert 2020</p>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">LEGOlize DADA2: getting DADA2 into Snakemake</h1>
+	<span class="post-date">jeu. 08 octobre 2020</span>
+	<p>I finally have the time to properly use the workflow management <a href="https://github.com/snakemake/snakemake">Snakemake</a> which is great because so many recent developments happened since I&rsquo;ve heard of this tool during my master degree. The authors and contributors of Snakemake actually published recently a <a href="https://doi.org/10.5281/zenodo.4067137">preprint</a> highlighting such features.</p>
+<p>Among these features, one could be compared to LEGO&reg; bricks: Snakemake <em>wrappers</em>.  They are dedicated Snakemake rule that allow to plug &ndash; much like bricks &ndash; common tools to perform your analysis. These wrappers should pass automatic tests prior to their integration in the repository which safeguard against typos during development that hinders your workflow.</p>
+<p>Bricks can even be assembled in dedicated sets, which in the case of Snakemake means that wrappers can be combined to design <em>meta-wrapper</em> where a common analysis workflow can be crafted using a selection of wrappers. This convenient idea enables the user to finely tune the level of modularity wished during the design of its Snakemake workflow: from custom rules, wrappers to meta-wrappers<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+<p>Snakemake use is rising and there was even recently a <a href="https://doi.org/10.1101/2020.05.17.095679">preprint</a> for a DADA2 with Snakemake workflow. I was really excited for this huge contribution that, in my opinion, filled a gap. However, I realized that some steps were not parts of my personal workflow (such as the taxonomy) and that instead of this one well running Snakemake workflow &ndash; huge LEGO set &ndash;, I&rsquo;d rather choose from several DADA2 wrappers &ndash; piles of bricks &ndash; to build a more flexible workflow.</p>
+<p>It all started when I realised that there were no DADA2 wrappers and even few metabarcoding related wrappers proposed in the repository.<br>
+Last week, I then started writing my first wrappers by mimicking previous R wrappers listed in the <a href="https://snakemake-wrappers.readthedocs.io/en/stable/index.html">repository</a>. I tried to design toy examples to test the wrappers and I even manage to propose a few pull requests on the <a href="https://github.com/snakemake/snakemake-wrappers/pulls">Github repository</a>. However, I realize after going over the corrections proposed by the reviewer that I needed to carefully think ahead my wrapper and their articulations. Indeed, I first proposed wrappers using paired-end reads only which is not truly flexible. Hence some of my wrappers contained duplicated lines of code to cope with the orientation which violates the <em>don&rsquo;t repeat yourself</em> <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">rule</a>.
+Even worse, it sometimes adds complexity to steps that could be processed unbeknownst of the reads orientation. </p>
+<p>Therefore, I put my pull request on a draft status and will go back to writing properly. I already put on paper the dependency of wrappers to read orientation in order to optimize this workflow. I hope to propose soon these DADA2 wrappers and eventually a DADA2 meta-wrappers as well.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Check the <a href="https://snakemake.readthedocs.io/en/stable/snakefiles/modularization.html">documentation</a> for more details on modularisation with Snakemake.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+</div>
+		</div>
+	</body>
+</html>
