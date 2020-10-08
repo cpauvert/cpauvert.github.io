@@ -5,6 +5,7 @@ AUTHOR = 'Charlie Pauvert'
 SITENAME = 'Charlie Pauvert webpages'
 SITEURL = ''
 
+
 PATH = 'content'
 
 TIMEZONE = 'Europe/Paris'
@@ -25,10 +26,10 @@ LINKS = (('Pelican', 'https://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
-
-DEFAULT_PAGINATION = 10
+SOCIAL = (('researchgate', 'https://www.researchgate.net/profile/Charlie_Pauvert'),
+          ('linkedin', 'https://www.linkedin.com/in/charliepauvert'),
+          ('github', 'https://github.com/cpauvert'))
+DEFAULT_PAGINATION = 3
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
@@ -36,3 +37,11 @@ DEFAULT_PAGINATION = 10
 # Add paths for extra
 STATIC_PATHS = ["images", "extra"]
 EXTRA_PATH_METADATA = { 'extra/favicon.ico': {'path': 'favicon.ico'} }
+
+# Add a theme
+THEME = "pelican-hyde"
+# Theme configuration
+COLOR_THEME = "0b"
+PROFILE_IMAGE = "profile.jpg"
+FONT_ACADEMICONS = True
+FOOTER_TEXT = "(c) Copyright Charlie Pauvert 2020"
