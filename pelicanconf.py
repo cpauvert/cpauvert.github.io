@@ -45,3 +45,16 @@ COLOR_THEME = "0b"
 PROFILE_IMAGE = "profile.jpg"
 FONT_ACADEMICONS = True
 FOOTER_TEXT = "(c) Copyright Charlie Pauvert 2020"
+
+
+# Markdown configuration
+#
+MARKDOWN = {
+        'extension_configs': {
+            'markdown.extensions.codehilite': {'css_class': 'highlight'},
+            'markdown.extensions.extra': {},
+            'markdown.extensions.meta': {},
+            'markdown.extensions.smarty': {},
+            },
+        'output_format': 'html5',
+        }
