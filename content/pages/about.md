@@ -1,11 +1,9 @@
 Title: About
 
-<img align="right" width="200" height="200" src="{static}/images/head.jpg">
-
 
 ## About me
 
-I am a curious and dedicated bioinformatics young scientist. I was, and still is, mostly intrigued by **microbial communities** within various places (_e.g._, cheeses, plants, sourdough). I like to gain knowledge about them using tools I'm familiar with such as DNA sequences and the associated bioinformatics toolbox, but I look forward to gain more insights on them by learning new skills. 
+<img style="float: left; border-radius: 5px; margin: 10px; padding: 0;" width="200" height="200" src="{static}/images/head.jpg"> I am a curious and dedicated bioinformatics young scientist. I was, and still is, mostly intrigued by **microbial communities** within various places (_e.g._, cheeses, plants, sourdough). I like to gain knowledge about them using tools I'm familiar with such as DNA sequences and the associated bioinformatics toolbox, but I look forward to gain more insights on them by learning new skills.
 My computational training owes a lot to the open source community and therefore I value sharing clear code that anyone can reproduce, and I like it best when the solution is elegant as well as efficient.
 
 This website serves both as a place for my personal coding projects as well as a resume. My profile is also available on the following platforms: [<i class="ai-li ai ai-researchgate"></i> ResearchGate](https://www.researchgate.net/profile/Charlie_Pauvert), [<i class="fa-li fa fa-linkedin"></i> LinkedIn](https://www.linkedin.com/in/charliepauvert) and [<i class="fa-li fa fa-github"></i> GitHub](https://github.com/cpauvert).
