@@ -70,7 +70,7 @@
 </div>		<div class="content container">
 <div class="post">
 	<h1 class="post-title">LEGOlize DADA2: getting DADA2 into Snakemake</h1>
-	<span class="post-date">jeu. 08 octobre 2020</span>
+	<span class="post-date">2020-10-08</span>
 	<p>I finally have the time to properly use the workflow management <a href="https://github.com/snakemake/snakemake">Snakemake</a> which is great because so many recent developments happened since I&rsquo;ve heard of this tool during my master degree. The authors and contributors of Snakemake actually published recently a <a href="https://doi.org/10.5281/zenodo.4067137">preprint</a> highlighting such features.</p>
 <p>Among these features, one could be compared to LEGO&reg; bricks: Snakemake <em>wrappers</em>.  They are dedicated Snakemake rule that allow to plug &ndash; much like bricks &ndash; common tools to perform your analysis. These wrappers should pass automatic tests prior to their integration in the repository which safeguard against typos during development that hinders your workflow.</p>
 <p>Bricks can even be assembled in dedicated sets, which in the case of Snakemake means that wrappers can be combined to design <em>meta-wrapper</em> where a common analysis workflow can be crafted using a selection of wrappers. This convenient idea enables the user to finely tune the level of modularity wished during the design of its Snakemake workflow: from custom rules, wrappers to meta-wrappers<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>

@@ -70,7 +70,7 @@
 </div>		<div class="content container">
 <div class="post">
 	<h1 class="post-title">R with Snakemake: a few hurdles to overcome</h1>
-	<span class="post-date">mer. 21 octobre 2020</span>
+	<span class="post-date">2020-10-21</span>
 	<p>When working on the <a href="https://cpauvert.github.io/legolize-dada2.html">wrappers for DADA2</a>, I had to respect both the grammar of Python/Snakemake and R. Here are some of the hurdles I have encountered.</p>
 <h2>Keeping the log</h2>
 <p>Keeping track of the log is quite easy in Snakemake when the tools can run in the shell. Don&rsquo;t mistake me, R scripts can also be run on the shell using <code>Rscript</code> and <a href="https://lachlandeer.github.io/snakemake-econ-r-tutorial/logging-output-and-errors.html">Deer and Langer</a> showed that you can use the command <code>Rscript &gt; {log}</code> to correctly keep track of your script. However, when using wrappers you do not have access to this command because in the <a href="https://snakemake.readthedocs.io/en/stable/snakefiles/writing_snakefiles.html#grammar">Snakemake grammar</a> instead of the <code>script:</code> word you have the <code>wrapper:</code> word.</p>
