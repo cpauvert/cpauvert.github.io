@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Metadata -->
+	<meta name="description" content="">
+	<meta property="og:description" content="">
+	<meta property="og:title" content="Interactive visualisation of the influences of philosophers" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://cpauvert.github.io/interactive-visualisation-of-the-influences-of-philosophers.html" />
+		<meta property="og:image" content="https://cpauvert.github.io/images/profile.jpg" />
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Charlie Pauvert webpages</title>
+
+		<!-- CSS -->
+
+		<link rel="stylesheet" href="https://cpauvert.github.io/theme/css/poole.css" />
+		<link rel="stylesheet" href="https://cpauvert.github.io/theme/css/hyde.css" />
+		<link rel="stylesheet" href="https://cpauvert.github.io/theme/css/syntax.css" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" crossorigin="anonymous">
+			<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+		<!-- Feeds -->
+<link href="https://cpauvert.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Charlie Pauvert webpages Full Atom Feed" />
+<link href="https://cpauvert.github.io/feeds/visualisation.atom.xml" type="application/atom+xml" rel="alternate" title="Charlie Pauvert webpages Categories Atom Feed" />
+
+		<!-- Analytics -->
+	</head>
+
+	<body class="theme-base-0b layout-reverse">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<!-- <img class="profile-picture" src="https://cpauvert.github.io/images/profile.jpg"> -->
+					Charlie Pauvert webpages
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+			<ul class="sidebar-nav">
+					<li><a href="https://cpauvert.github.io/pages/about.html">About</a></li>
+			</ul>
+		<nav class="sidebar-social">
+					<a class="sidebar-social-item" href="https://www.researchgate.net/profile/Charlie_Pauvert" target="_blank">
+						<i class="ai ai-researchgate"></i>
+					</a>
+					<a class="sidebar-social-item" href="https://www.linkedin.com/in/charliepauvert" target="_blank">
+						<i class="fa fa-linkedin"></i>
+					</a>
+					<a class="sidebar-social-item" href="https://github.com/cpauvert" target="_blank">
+						<i class="fa fa-github"></i>
+					</a>
+			<a class="sidebar-social-item" href="https://cpauvert.github.io/feeds/all.atom.xml">
+				<i class="fa fa-rss"></i>
+			</a>
+		</nav>
+			<p class="sidebar-footer">(c) Copyright Charlie Pauvert 2020</p>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">Interactive visualisation of the influences of philosophers</h1>
+	<span class="post-date">2021-02-19</span>
+	<p>Last year, I started a data visualisation and aggregation project on my free time which I recently updated. Feel free to explore at <a href="https://cpauvert.shinyapps.io/in-phi-luence">cpauvert.shinyapps.io/in-phi-luence</a>. </p>
+<p>This project stemmed from a question of my partner regarding the schools of thoughts and influences of philosophers and next thing I knew I had opened R and had an excuse for a first Shiny application.</p>
+<p><img alt="Screenshot of the Shiny application" src="https://cpauvert.github.io/images/in-phi-luence_screenshot.png"></p>
+<p>The screenshot just above illustrates the Shiny application <em>in-phi-luence</em> displaying an interactive network of philosophers. Initially the sole data source of philosophers influences was <a href="https://en.wikipedia.org">The Free Encyclopedia Wikipedia (en)</a> whom articles on philosophers of science were automatically scraped (R code available on <a href="https://github.com/cpauvert/in-phi-luence">Github</a>).</p>
+<p>Few months after the initial draft version of the application, I stumble upon an interesting project, <a href="https://www.inphoproject.org">The Internet Philosophy Ontology Project (InPho)</a> which is a scholarly resource that compiles ontologies on philosophers and which are then made accessible through API or OWL files. Using the latter, I was able to fetch and concatenate monthly archives of the InPho ontologies to build a network. The R and Python code, and a Snakemake workflow are available on <a href="https://github.com/cpauvert/in-phi-luence/inpho">Github</a>.</p>
+<p>Another awesome resource, <a href="https://plato.stanford.edu/">The Standford Encyclopedia of Philosophy</a>, could have been used for a curated source of influences. However it did not provide any API to access its data nor flat files databases.</p>
+<p>In the future I plan to compare the two networks (Wikipedia vs. InPho) and perhaps suggest missing influences to Wikipedia. Another interesting lines would be the analysis of the philosophers network using node-level metrics. The in and out degrees are already displayed in a n interactive table but I unexpectedly struggle to find a relevant metrics (among centrality measures or authority scores) so far but there is room for improvements. </p>
+</div>
+		</div>
+	</body>
+</html>
