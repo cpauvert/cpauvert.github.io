@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Metadata -->
+	<meta name="description" content="">
+	<meta property="og:description" content="">
+	<meta property="og:title" content="mi-atlas: an interactive and evolving catalogue of microbial interactions" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://cpauvert.github.io/mi-atlas-catalogue-of-microbial-interactions.html" />
+		<meta property="og:image" content="https://cpauvert.github.io/images/profile.jpg" />
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Charlie Pauvert webpages</title>
+
+		<!-- CSS -->
+
+		<link rel="stylesheet" href="https://cpauvert.github.io/theme/css/poole.css" />
+		<link rel="stylesheet" href="https://cpauvert.github.io/theme/css/hyde.css" />
+		<link rel="stylesheet" href="https://cpauvert.github.io/theme/css/syntax.css" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" crossorigin="anonymous">
+			<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+		<!-- Feeds -->
+<link href="https://cpauvert.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Charlie Pauvert webpages Full Atom Feed" />
+<link href="https://cpauvert.github.io/feeds/visualisation.atom.xml" type="application/atom+xml" rel="alternate" title="Charlie Pauvert webpages Categories Atom Feed" />
+
+		<!-- Analytics -->
+	</head>
+
+	<body class="theme-base-0b layout-reverse">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<!-- <img class="profile-picture" src="https://cpauvert.github.io/images/profile.jpg"> -->
+					Charlie Pauvert webpages
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+			<ul class="sidebar-nav">
+					<li><a href="https://cpauvert.github.io/pages/about.html">About</a></li>
+			</ul>
+		<nav class="sidebar-social">
+					<a class="sidebar-social-item" href="https://www.researchgate.net/profile/Charlie_Pauvert" target="_blank">
+						<i class="ai ai-researchgate"></i>
+					</a>
+					<a class="sidebar-social-item" href="https://www.linkedin.com/in/charliepauvert" target="_blank">
+						<i class="fa fa-linkedin"></i>
+					</a>
+					<a class="sidebar-social-item" href="https://github.com/cpauvert" target="_blank">
+						<i class="fa fa-github"></i>
+					</a>
+			<a class="sidebar-social-item" href="https://cpauvert.github.io/feeds/all.atom.xml">
+				<i class="fa fa-rss"></i>
+			</a>
+		</nav>
+			<p class="sidebar-footer">(c) Copyright Charlie Pauvert 2020</p>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">mi-atlas: an interactive and evolving catalogue of microbial interactions</h1>
+	<span class="post-date">2021-06-09</span>
+	<p><img style="float: left; border-radius: 5px; margin: 10px; padding: 0;" width="173" height="200" src="https://cpauvert.github.io/images/logo-mi-atlas.png"> A couple of weeks ago, I read an article by <a href="https://doi.org/10.1093/femsle/fnz125">Pacheco and Segrè, 2019</a> in <em>FEMS Microbiology Letters</em> regarding microbial interactions and how to go beyond a classification dedicated to ecological outcomes only. Of course, no classification is perfect (just like standards will forever be developed to encompass exceptions, <a href="https://xkcd.com/927">leading to even more standards</a>).</p>
+<p>They propose to encode interactions between microorganisms using several binary (<code>0/1</code>) or ternary (<code>0/1/-1</code>) <em>attributes</em> to build a catalog amenable to quantitative analyses. I thought this was a good idea. But I was frustrated that their (huge) initial effort to describe 74 interactions was &ldquo;buried&rdquo; in the Supplementary Material section of their article. Such multivariate table with 33 columns, while suitable for machines is hard to encompass for human. So I started to work on how to improve the visualisation of the catalogue and provide means for others scientists to contribute easily.</p>
+<p>In the end, I provided:</p>
+<ul>
+<li>a <a href="https://cpauvert.github.io/mi-atlas">website</a> </li>
+<li>a <a href="https://cpauvert.shinyapps.io/mi-atlas">Shiny application</a></li>
+<li>and a one <a href="https://github.com/cpauvert/mi-atlas">Github</a> repository to bring them all (<em>and in the darkness bind them</em>)</li>
+</ul>
+<p>The <a href="https://cpauvert.github.io/mi-atlas">website</a> presents their framework and the idea behind my project. The <a href="https://cpauvert.shinyapps.io/mi-atlas">Shiny application</a> displays the catalogue, allows to interactively focus on one interaction and helps users to encode a new interaction within the framework.
+Have a look and do not hesitate to <a href="https://github.com/cpauvert/mi-atlas/blob/main/CONTRIBUTING.md">drop an issue</a> if you feel like it!</p>
+</div>
+		</div>
+	</body>
+</html>
