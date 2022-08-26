@@ -43,7 +43,6 @@ EXTRA_PATH_METADATA = { 'extra/favicon.ico': {'path': 'favicon.ico'} }
 THEME = "pelican-hyde"
 # Theme configuration
 COLOR_THEME = "0b"
-PROFILE_IMAGE = "profile.jpg"
 FONT_ACADEMICONS = True
 FOOTER_TEXT = "(c) Copyright Charlie Pauvert 2020"
 
