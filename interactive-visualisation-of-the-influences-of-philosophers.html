@@ -11,7 +11,7 @@
 	<meta property="og:title" content="Interactive visualisation of the influences of philosophers" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://cpauvert.github.io/interactive-visualisation-of-the-influences-of-philosophers.html" />
-		<meta property="og:image" content="https://cpauvert.github.io/images/profile.jpg" />
+		<meta property="og:image" content="https://cpauvert.github.io/images/" />
 
 		<!-- Enable responsiveness on mobile devices-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -19,6 +19,8 @@
 		<title>Charlie Pauvert webpages</title>
 
 		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
 
 		<link rel="stylesheet" href="https://cpauvert.github.io/theme/css/poole.css" />
 		<link rel="stylesheet" href="https://cpauvert.github.io/theme/css/hyde.css" />
@@ -40,7 +42,6 @@
 
 			<h1>
 				<a href="/">
-					<!-- <img class="profile-picture" src="https://cpauvert.github.io/images/profile.jpg"> -->
 					Charlie Pauvert webpages
 				</a>
 			</h1>
@@ -78,6 +79,8 @@
 <p>Few months after the initial draft version of the application, I stumble upon an interesting project, <a href="https://www.inphoproject.org">The Internet Philosophy Ontology Project (InPho)</a> which is a scholarly resource that compiles ontologies on philosophers and which are then made accessible through API or OWL files. Using the latter, I was able to fetch and concatenate monthly archives of the InPho ontologies to build a network. The R and Python code, and a Snakemake workflow are available on <a href="https://github.com/cpauvert/in-phi-luence/inpho">Github</a>.</p>
 <p>Another awesome resource, <a href="https://plato.stanford.edu/">The Standford Encyclopedia of Philosophy</a>, could have been used for a curated source of influences. However it did not provide any API to access its data nor flat files databases.</p>
 <p>In the future I plan to compare the two networks (Wikipedia vs. InPho) and perhaps suggest missing influences to Wikipedia. Another interesting lines would be the analysis of the philosophers network using node-level metrics. The in and out degrees are already displayed in a n interactive table but I unexpectedly struggle to find a relevant metrics (among centrality measures or authority scores) so far but there is room for improvements. </p>
+
+
 </div>
 		</div>
 	</body>
